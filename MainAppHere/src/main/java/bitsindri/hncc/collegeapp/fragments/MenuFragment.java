@@ -19,10 +19,7 @@ import bitsindri.hncc.collegeapp.Adapters.MenuAdapter;
 import bitsindri.hncc.collegeapp.Custom_Classes.menuClass;
 import bitsindri.hncc.collegeapp.R;
 import bitsindri.hncc.collegeapp.activities.AchievementsActivity;
-<<<<<<< HEAD
 import bitsindri.hncc.collegeapp.activities.CameraDialog;
-=======
->>>>>>> upstreamhncc/main
 import bitsindri.hncc.collegeapp.activities.ContactUsActivity;
 import bitsindri.hncc.collegeapp.activities.BuisnessActivity;
 import bitsindri.hncc.collegeapp.activities.ContestsAndHackathonsActivity;
@@ -137,11 +134,7 @@ public class MenuFragment extends Fragment implements MenuAdapter.calluser {
             fragmentManager.beginTransaction().setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out).replace(R.id.frameLayout, new StudyResources_Fragment()).addToBackStack(null).commit();
 
         }else if(position == 1){
-<<<<<<< HEAD
            startActivity(new Intent(getContext(), FrontActivity.class));
-=======
-            startActivity(new Intent(getContext(), FrontActivity.class));
->>>>>>> upstreamhncc/main
         }else if(position == 2){
             startActivity(new Intent(getContext(), InternshipsAndJobsActivity.class));
         }else if(position == 3){

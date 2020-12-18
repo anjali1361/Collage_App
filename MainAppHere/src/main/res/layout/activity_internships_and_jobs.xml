@@ -6,10 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C8CDD3"
-<<<<<<< HEAD
-    tools:context=".activities.InternshipsAndJobsActivity">
-
-=======
     xmlns:shimmer="http://schemas.android.com/apk/res-auto"
     tools:context=".activities.InternshipsAndJobsActivity">
 
@@ -41,7 +37,6 @@
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
->>>>>>> upstreamhncc/main
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/internship_an_jobs_recycler_view"
         android:layout_width="match_parent"

@@ -3,17 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-<<<<<<< HEAD
-=======
     xmlns:shimmer="http://schemas.android.com/apk/res-auto"
->>>>>>> upstreamhncc/main
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C8CDD3"
     tools:context=".activities.ContestsAndHackathonsActivity">
 
-<<<<<<< HEAD
-=======
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_view_container"
         android:layout_width="wrap_content"
@@ -42,7 +37,6 @@
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
->>>>>>> upstreamhncc/main
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contests_and_hackathons_recycler_view"
         android:layout_width="match_parent"

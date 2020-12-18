@@ -6,16 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-<<<<<<< HEAD
-import android.widget.Toast;
-
-=======
 import android.view.View;
 import android.widget.Toast;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
 
->>>>>>> upstreamhncc/main
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,21 +29,13 @@ public class WorkshopsAndWebinarsActivity extends AppCompatActivity {
     ArrayList<internshipsAndJobs> workshopsAndWebinarsArrayList;
     RecyclerView workshopsAndWebinarsRecyclerView;
     InternshipsAndJobsAdapter workshopsAndWebinarsAdapter;
-<<<<<<< HEAD
-
-=======
     ShimmerFrameLayout mShimmerViewContainer;
->>>>>>> upstreamhncc/main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workshops_and_webinars);
 
-<<<<<<< HEAD
-
-=======
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
->>>>>>> upstreamhncc/main
         workshopsAndWebinarsArrayList = new ArrayList<>();
         workshopsAndWebinarsArrayList.clear();
 
@@ -88,12 +75,9 @@ public class WorkshopsAndWebinarsActivity extends AppCompatActivity {
 
                 workshopsAndWebinarsAdapter.notifyDataSetChanged();
 
-<<<<<<< HEAD
-=======
                 mShimmerViewContainer.stopShimmer();
                 mShimmerViewContainer.setVisibility(View.GONE);
 
->>>>>>> upstreamhncc/main
             }
 
             @Override
