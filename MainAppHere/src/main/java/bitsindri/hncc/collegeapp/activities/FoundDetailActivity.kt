@@ -18,7 +18,10 @@ class FoundDetailActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbarLayout)
         supportActionBar?.setTitle("Found Detail Activity")
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> upstreamhncc/main
     }
 }
