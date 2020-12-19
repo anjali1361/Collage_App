@@ -48,7 +48,7 @@ public class AddAchievementActivity extends AppCompatActivity {
 
         add_achievement_button.setOnClickListener(v->{
 
-            if (!achievement_edit_text.getText().equals("") && selectedImageBmp != null){
+            if (achievement_edit_text.getText().length() !=0 && selectedImageBmp != null){
                 Toast.makeText(this, "Successfully added achievements", Toast.LENGTH_SHORT)
                         .show();
             }
