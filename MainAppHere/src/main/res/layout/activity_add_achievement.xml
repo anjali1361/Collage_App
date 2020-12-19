@@ -27,7 +27,7 @@
             android:layout_marginBottom="10dp" />
 
         <Button
-            android:id="@+id/add_achievement_image_button"
+            android:id="@+id/add_achievement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Image"
@@ -55,7 +55,7 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_achievement_image_button"/>
+            app:layout_constraintTop_toBottomOf="@+id/add_achievement"/>
         <EditText
             android:id="@+id/achievement_edit_text"
             android:layout_width="match_parent"
@@ -72,7 +72,7 @@
             app:layout_constraintTop_toBottomOf="@+id/achievement_text_view"/>
 
         <Button
-            android:id="@+id/add_issue_button"
+            android:id="@+id/add_achievement_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Add my achievement"
