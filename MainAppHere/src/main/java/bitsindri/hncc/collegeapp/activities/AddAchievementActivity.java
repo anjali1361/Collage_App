@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.theartofdev.edmodo.cropper.CropImage;
@@ -34,6 +35,7 @@ public class AddAchievementActivity extends AppCompatActivity {
     public byte[] selectedImageBytes;
     Bitmap selectedImageBmp = null;
     public  Boolean pictureJustChanged= false;
+    EditText achievement_edit_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,20 @@ public class AddAchievementActivity extends AppCompatActivity {
         add_achievement= findViewById(R.id.add_achievement);
         achievement_image = findViewById(R.id.achievement_image);
         add_achievement_button = findViewById(R.id.add_achievement_button);
+        achievement_edit_text = findViewById(R.id.achievement_edit_text);
+
+        add_achievement_button.setOnClickListener(v->{
+
+            if (!achievement_edit_text.getText().equals("") && selectedImageBmp != null){
+                Toast.makeText(this, "Successfully added achievements", Toast.LENGTH_SHORT)
+                        .show();
+            }
+            else{
+                Toast.makeText(this, "Add all Fields", Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+        });
 
         add_achievement.setOnClickListener(v -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -103,50 +119,15 @@ public class AddAchievementActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-//    @SuppressLint("CommitPrefEdits");
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
-//
-//            // start picker to get image for cropping and then use the image in cropping activity
-//
-//            CropImage.activity()
-//                    .setGuidelines(CropImageView.Guidelines.ON)
-//                    .setAspectRatio(1, 1)
-//                    .start(this);
-//
-//        }
-//        //to get the cropped image
-//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-//            val result = CropImage.getActivityResult(data)
-//            if (resultCode == Activity.RESULT_OK) {
-//                val selectedImagePath = result.uri
-//                val selectedImageBmp =
-//                        MediaStore.Images.Media.getBitmap(contentResolver, selectedImagePath)
-//
-//                val outputStream = ByteArrayOutputStream()
-//                selectedImageBmp.compress(Bitmap.CompressFormat.JPEG, 90, outputStream)
-//                selectedImageBytes = outputStream.toByteArray()
-//
-//
-//            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-//                val error = result.error
-//            }
-//
-//            GlideApp.with(this).load(selectedImageBytes).into(profile_pic)
-//            pictureJustChanged = true
-//
-//            super.onActivityResult(requestCode, resultCode, data)
-//        }
-//    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
+        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null && data.getData() !=null) {
+
+
 
             // start picker to get image for cropping and then use the image in cropping activity
-
             CropImage.activity()
                     .setGuidelines(CropImageView.Guidelines.ON)
                     .setAspectRatio(1, 1)
